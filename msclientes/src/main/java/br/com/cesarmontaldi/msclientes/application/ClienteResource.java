@@ -1,12 +1,15 @@
 package br.com.cesarmontaldi.msclientes.application;
 
 import br.com.cesarmontaldi.msclientes.infra.Cliente;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+
 
 @RestController
 @RequestMapping("/clientes")
@@ -15,9 +18,11 @@ public class ClienteResource {
     @Autowired
     private ClienteService service;
 
+    private Logger logger = LoggerFactory.getLogger(ClienteResource.class);
 
     @GetMapping
     public String status() {
+        logger.info("Obtendo o status do microservice de clientes");
         return "OK";
     }
 
