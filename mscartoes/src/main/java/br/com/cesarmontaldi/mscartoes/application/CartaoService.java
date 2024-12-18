@@ -1,5 +1,7 @@
 package br.com.cesarmontaldi.mscartoes.application;
 
+import br.com.cesarmontaldi.mscartoes.application.representation.DadosCadastroCartao;
+import br.com.cesarmontaldi.mscartoes.application.representation.DadosCartao;
 import br.com.cesarmontaldi.mscartoes.infra.Cartao;
 import br.com.cesarmontaldi.mscartoes.infra.CartaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,4 +30,5 @@ public class CartaoService {
                 .map(DadosCartao::new)
                 .toList();
     }
+
 }

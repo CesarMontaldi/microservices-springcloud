@@ -1,6 +1,6 @@
 package br.com.cesarmontaldi.mscartoes.infra;
 
-import br.com.cesarmontaldi.mscartoes.application.DadosCadastroCartao;
+import br.com.cesarmontaldi.mscartoes.application.representation.DadosCadastroCartao;
 import br.com.cesarmontaldi.mscartoes.domain.BandeiraCartao;
 import jakarta.persistence.*;
 

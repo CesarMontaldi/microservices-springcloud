@@ -1,4 +1,4 @@
-package br.com.cesarmontaldi.mscartoes.application;
+package br.com.cesarmontaldi.mscartoes.application.representation;
 
 import br.com.cesarmontaldi.mscartoes.domain.BandeiraCartao;
 
