@@ -4,6 +4,7 @@ public class DadosCliente {
 
     private Long id;
     private String nome;
+    private Integer idade;
 
 
     public Long getId() {
@@ -12,5 +13,9 @@ public class DadosCliente {
 
     public String getNome() {
         return nome;
+    }
+
+    public Integer getIdade() {
+        return idade;
     }
 }

@@ -4,7 +4,7 @@ import br.com.cesarmontaldi.mscartoes.infra.ClienteCartao;
 
 import java.math.BigDecimal;
 
-public record DadosCartaoPorCliente(String cpf, String bandeira, BigDecimal limiteLiberado) {
+public record DadosCartaoPorCliente(String nome, String bandeira, BigDecimal limiteLiberado) {
 
     public DadosCartaoPorCliente(ClienteCartao clienteCartao) {
         this(
