@@ -1,4 +1,4 @@
-package br.com.cesarmontaldi.mscartoes.infra;
+package br.com.cesarmontaldi.mscartoes.infra.cartao;
 
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCadastroCartao;
 import br.com.cesarmontaldi.mscartoes.domain.BandeiraCartao;

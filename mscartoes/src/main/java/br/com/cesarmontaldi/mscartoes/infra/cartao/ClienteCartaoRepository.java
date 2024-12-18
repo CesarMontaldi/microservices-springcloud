@@ -1,4 +1,4 @@
-package br.com.cesarmontaldi.mscartoes.infra;
+package br.com.cesarmontaldi.mscartoes.infra.cartao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

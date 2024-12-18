@@ -2,8 +2,8 @@ package br.com.cesarmontaldi.mscartoes.application;
 
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCadastroCartao;
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCartao;
-import br.com.cesarmontaldi.mscartoes.infra.Cartao;
-import br.com.cesarmontaldi.mscartoes.infra.CartaoRepository;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.Cartao;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.CartaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

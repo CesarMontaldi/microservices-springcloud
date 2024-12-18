@@ -1,7 +1,7 @@
 package br.com.cesarmontaldi.mscartoes.application.representation;
 
 import br.com.cesarmontaldi.mscartoes.domain.BandeiraCartao;
-import br.com.cesarmontaldi.mscartoes.infra.Cartao;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.Cartao;
 
 import java.math.BigDecimal;
 

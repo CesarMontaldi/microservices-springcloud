@@ -1,8 +1,8 @@
 package br.com.cesarmontaldi.mscartoes.application;
 
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCartaoPorCliente;
-import br.com.cesarmontaldi.mscartoes.infra.ClienteCartao;
-import br.com.cesarmontaldi.mscartoes.infra.ClienteCartaoRepository;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.ClienteCartao;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.ClienteCartaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

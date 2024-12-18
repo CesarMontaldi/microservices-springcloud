@@ -1,6 +1,6 @@
 package br.com.cesarmontaldi.mscartoes.application.representation;
 
-import br.com.cesarmontaldi.mscartoes.infra.ClienteCartao;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.ClienteCartao;
 
 import java.math.BigDecimal;
 

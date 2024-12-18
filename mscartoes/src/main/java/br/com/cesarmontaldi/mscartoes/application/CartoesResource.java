@@ -3,7 +3,7 @@ package br.com.cesarmontaldi.mscartoes.application;
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCadastroCartao;
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCartao;
 import br.com.cesarmontaldi.mscartoes.application.representation.DadosCartaoPorCliente;
-import br.com.cesarmontaldi.mscartoes.infra.Cartao;
+import br.com.cesarmontaldi.mscartoes.infra.cartao.Cartao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
