@@ -2,9 +2,8 @@ package br.com.cesarmontaldi.msavalidorcredito.application;
 
 import br.com.cesarmontaldi.msavalidorcredito.application.exceptions.DadosClienteNotFoundException;
 import br.com.cesarmontaldi.msavalidorcredito.application.exceptions.ErroComunicacaoMicroservicesException;
-import br.com.cesarmontaldi.msavalidorcredito.domain.DadosAvaliacao;
-import br.com.cesarmontaldi.msavalidorcredito.domain.RetornoAvaliacaoCliente;
-import br.com.cesarmontaldi.msavalidorcredito.domain.SituacaoCliente;
+import br.com.cesarmontaldi.msavalidorcredito.application.exceptions.ErroSolicitacaoCartaoException;
+import br.com.cesarmontaldi.msavalidorcredito.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -48,6 +47,6 @@ public class AvaliadorCreditoController {
         catch (ErroComunicacaoMicroservicesException e) {
             return ResponseEntity.status(HttpStatus.resolve(e.getStatus())).body(e.getMessage());
         }
-
     }
+
 }

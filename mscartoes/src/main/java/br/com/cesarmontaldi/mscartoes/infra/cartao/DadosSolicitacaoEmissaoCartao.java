@@ -1,4 +1,4 @@
-package br.com.cesarmontaldi.msavalidorcredito.domain;
+package br.com.cesarmontaldi.mscartoes.infra.cartao;
 
 import java.math.BigDecimal;
 
@@ -14,15 +14,31 @@ public class DadosSolicitacaoEmissaoCartao {
         return idCartao;
     }
 
+    public void setIdCartao(Long idCartao) {
+        this.idCartao = idCartao;
+    }
+
     public String getCpf() {
         return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEndereco() {
         return endereco;
     }
 
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
     public BigDecimal getLimiteLiberado() {
         return limiteLiberado;
+    }
+
+    public void setLimiteLiberado(BigDecimal limiteLiberado) {
+        this.limiteLiberado = limiteLiberado;
     }
 }

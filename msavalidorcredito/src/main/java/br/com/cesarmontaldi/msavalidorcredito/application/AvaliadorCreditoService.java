@@ -2,11 +2,12 @@ package br.com.cesarmontaldi.msavalidorcredito.application;
 
 import br.com.cesarmontaldi.msavalidorcredito.application.exceptions.DadosClienteNotFoundException;
 import br.com.cesarmontaldi.msavalidorcredito.application.exceptions.ErroComunicacaoMicroservicesException;
+import br.com.cesarmontaldi.msavalidorcredito.application.exceptions.ErroSolicitacaoCartaoException;
 import br.com.cesarmontaldi.msavalidorcredito.domain.*;
 import br.com.cesarmontaldi.msavalidorcredito.infra.clients.CartoesResourseClient;
 import br.com.cesarmontaldi.msavalidorcredito.infra.clients.ClienteResourceClient;
+import br.com.cesarmontaldi.msavalidorcredito.infra.mqueue.SolicitacaoEmissaoCartaoPublisher;
 import feign.FeignException;
-import feign.RetryableException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.UUID;
 
 @Service
 public class AvaliadorCreditoService {
@@ -80,4 +81,5 @@ public class AvaliadorCreditoService {
             throw new ErroComunicacaoMicroservicesException(e.contentUTF8(), status);
         }
     }
+
 }
