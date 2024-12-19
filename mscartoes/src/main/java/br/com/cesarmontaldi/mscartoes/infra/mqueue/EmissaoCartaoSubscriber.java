@@ -1,8 +1,9 @@
 package br.com.cesarmontaldi.mscartoes.infra.mqueue;
 
 import br.com.cesarmontaldi.mscartoes.infra.cartao.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -16,6 +17,9 @@ public class EmissaoCartaoSubscriber {
 
     @Autowired
     private ClienteCartaoRepository clienteCartaoRepository;
+
+    private Logger log = LoggerFactory.getLogger(EmissaoCartaoSubscriber.class);
+
 
     @RabbitListener(queues = "${mq.queues.emissao-cartoes}")
     public void receberSolicitacaoEmissao(@Payload String payload) {
@@ -31,7 +35,7 @@ public class EmissaoCartaoSubscriber {
             clienteCartaoRepository.save(clienteCartao);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Error ao receber solicitacao de emissao de cartao: {} ", e.getMessage() );
         }
     }
 }
