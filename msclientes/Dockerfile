@@ -11,10 +11,10 @@ WORKDIR /app
 
 COPY --from=build ./app/target/*.jar ./app.jar
 
-EXPOSE 8761
-
+ENV EUREKA_SERVER=''
 ENV EUREKA_USERNAME=''
 ENV EUREKA_PASSWORD=''
+
 
 ENV TZ='America/Sao_Paulo'
 
